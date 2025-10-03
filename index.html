@@ -1,22 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Site de Breno Porto</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Site de Breno Porto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-blue': '#1e3a5f',
+                        'darker-blue': '#0f1f3a',
+                    },
+                    fontFamily: {
+                        'sans': ['Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <h1>Breno Porto Caparrosa</h1>
-    <h2>sobre mim</h2>
-    <p>Oi, meu nome é Breno, e eu estou cursando TADS(Tecnologia em análise e desenvolvimento de sistemas).
-        E estou buscando experiências em áreas de trabalho, para que eu possa melhorar minhas habilidades com prática em situações reais. Pelo momento, tenho experiência principalmente com Python, e busco expandir meu repertorio para java e html.
-    </p>
-    <p>Dados pessoais:<br>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Header com foto -->
+    <header class="bg-dark-blue shadow-lg">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex-1">
+                    <!-- Adicionando nome e informações do Breno -->
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Breno Porto Caparrosa</h1>
+                    <p class="text-xl text-gray-300 mb-4">Estudante de TADS</p>
+                    <p class="text-gray-400 max-w-2xl">
+                        Cursando Tecnologia em Análise e Desenvolvimento de Sistemas, buscando experiências em áreas de trabalho para melhorar minhas habilidades com prática em situações reais.
+                    </p>
+                </div>
+                <!-- Foto no canto superior direito -->
+                <div class="flex-shrink-0">
+                    <img 
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/C7r46dwPlZH%28JPG%29-9DmCJAKSJRyJxtRPGshetbBFd4QNLy.jpg" 
+                        alt="Foto de Breno Porto" 
+                        class="w-48 h-48 rounded-full border-4 border-gray-600 shadow-xl object-cover"
+                    />
+                </div>
+            </div>
+        </div>
+    </header>
 
-        Email: breno110604@gmail.com<br>
-        Número: +55 27 99997-2853<br>
-        CPF: 15993952741<br>
-    </p>
+    <!-- Navegação -->
+    <nav class="bg-darker-blue sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6">
+            <ul class="flex flex-wrap gap-2 md:gap-8 py-4">
+                <li><a href="#sobre" class="text-gray-300 hover:text-white transition-colors">Sobre</a></li>
+                <li><a href="#habilidades" class="text-gray-300 hover:text-white transition-colors">Habilidades</a></li>
+                <li><a href="#contato" class="text-gray-300 hover:text-white transition-colors">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Sobre -->
+        <section id="sobre" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-dark-blue pb-2">Sobre Mim</h2>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <!-- Usando o texto original do Breno -->
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Oi, meu nome é Breno, e eu estou cursando TADS (Tecnologia em Análise e Desenvolvimento de Sistemas).
+                </p>
+                <p class="text-gray-300 leading-relaxed">
+                    Estou buscando experiências em áreas de trabalho, para que eu possa melhorar minhas habilidades com prática em situações reais. Pelo momento, tenho experiência principalmente com Python, e busco expandir meu repertório para Java e HTML.
+                </p>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-dark-blue pb-2">Habilidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Adicionando habilidades do Breno -->
+                <div class="bg-dark-blue rounded-lg p-4 shadow-lg">
+                    <h3 class="font-bold text-white mb-2">Python</h3>
+                    <p class="text-gray-300 text-sm">Programação avançada</p>
+                </div>
+                <div class="bg-dark-blue rounded-lg p-4 shadow-lg">
+                    <h3 class="font-bold text-white mb-2">Inglês</h3>
+                    <p class="text-gray-300 text-sm">Nível avançado</p>
+                </div>
+                <div class="bg-dark-blue rounded-lg p-4 shadow-lg">
+                    <h3 class="font-bold text-white mb-2">HTML</h3>
+                    <p class="text-gray-300 text-sm">Em desenvolvimento</p>
+                </div>
+                <div class="bg-dark-blue rounded-lg p-4 shadow-lg">
+                    <h3 class="font-bold text-white mb-2">Java</h3>
+                    <p class="text-gray-300 text-sm">Buscando expandir conhecimento</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b-2 border-dark-blue pb-2">Contato</h2>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h3 class="font-bold text-white mb-4">Dados Pessoais</h3>
+                <div class="space-y-3">
+                    <p class="text-gray-300">
+                        <span class="font-semibold">Email:</span> breno110604@gmail.com
+                    </p>
+                    <p class="text-gray-300">
+                        <span class="font-semibold">Número:</span> +55 27 99997-2853
+                    </p>
+                    <p class="text-gray-300">
+                        <span class="font-semibold">CPF:</span> 159.939.527-41
+                    </p>
+                    <p class="text-gray-300">
+                        <span class="font-semibold">Perfil GITHUB:</span> 
+                        <a href="https://github.com/BrenoFaesa" target="_blank" class="text-blue-400 hover:text-blue-300 underline transition-colors">
+                            github.com/BrenoFaesa
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-darker-blue py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2025 Breno Porto Caparrosa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
